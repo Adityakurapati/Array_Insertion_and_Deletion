@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <style>
+html, body {
+
+  height: 100%;
+
+  width: 100%;
+
+  background:orange;
+
+  margin:0;
+
+}
+
+nav{
+
+  background: #7300ff;
+
+  display:flex;
+
+}
+
+nav{
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+h1{
+
+  padding:4px;
+
+  margin:4px;
+
+  list-style-type: none;
+
+  color:white
+
+}
+
+section{
+
+  background:aqua;
+
+  display:grid;
+
+}
+
+input{
+
+  padding:10px;
+
+  margin:20px;
+
+}
+
+button{
+
+  margin-left:10%;
+
+  margin-bottom:6%;
+
+  width:80vw;
+
+  height:6vh;
+
+  color:coral;
+
+  background-image: url('https://www.lifewire.com/thmb/kZydK0ktjb-12rCQgql87OVFM_o=/640x0/filters:no_upscale():max_bytes(150000):strip_icc():gifv():format(webp)/The-8-Best-Online-Coding-Courses-of-2021-77ff57d2460349c4b82842afc82d8e4b.jpg');
+
+  background-attachment: fixed;
+
+  background-repeat: repeat;
+
+}
+
+input{
+
+  transition:width 0.3s,height 0.3s;
+
+}
+
+input:hover{
+
+  box-shadow:4px 4px 30px 2px #0c0c8a;
+
+ width:86vw;
+
+height:5vh;
+
+}
+    
+
+  </style>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width">
+
+  <title>replit</title>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+  <section id='s1'>
+
+    <nav>
+
+      <ul>
+
+        <h1>
+
+          Arrey
+
+        </h1>
+
+      </ul>
+
+    </nav>
+
+    <a href='https://unit-2.aditya455.repl.co/'>Reload</a>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body><script>
+let brake1 = document.createElement('br')
+
+s1.append(brake1)
+
+let txt = document.createElement('input')
+
+txt.placeholder = "Enter Array Size"
+
+s1.appendChild(txt)
+
+let txt2 = document.createElement('input')
+
+txt2.placeholder = "Array Elements(Separate Array Elements By Space) "
+
+s1.appendChild(txt2)
+
+let txt3 = document.createElement('input')
+
+txt3.placeholder = "Index To Add "
+
+s1.appendChild(txt3)
+
+let txt4 = document.createElement('input')
+
+txt4.placeholder = "Element to add "
+
+s1.appendChild(txt4);
+
+let result = document.createElement('input')
+
+result.placeholder = "After Insertion "
+
+var guiArr;
+
+var insertMe = () => {
+
+  let v1 = parseInt(txt.value)
+
+  let v2 = txt2.value;
+
+  let v3 = parseInt(txt3.value)
+
+  let v4 = parseInt(txt4.value)
+
+  guiArr = v2.split(' ');
+
+  let gui = txt3.value
+
+  result.value = gui
+
+  for (var j = v1; j > v3 + 1; j--) {
+
+    guiArr[j + 1] = guiArr[j];
+
+  }
+
+  guiArr[v3 - 1] = v4;
+
+  v1++;
+
+  result.value = guiArr
+
+}
+
+var removeMe = () => {
+
+  let v1 = parseInt(txt.value)
+
+  let v2 = txt2.value;
+
+  let v3 = parseInt(txt3.value)
+
+  let v4 = parseInt(txt4.value)
+
+  // var guiArr = new Array(v1);
+
+  var guiArr = v2.split(' ');
+
+  let gui = txt3.value
+
+  result.value = gui
+
+  for (var j = v3; j < v1; j++) {
+
+    guiArr[j] = guiArr[j + 1];
+
+  }
+
+  v1--;
+
+  result.value = guiArr
+
+}
+
+let insert = document.createElement('button')
+
+insert.innerText = "Insert"
+
+insert.addEventListener('click', insertMe)
+
+s1.appendChild(insert)
+
+let remove = document.createElement('button')
+
+remove.innerText = "Remove"
+
+remove.addEventListener('click', removeMe)
+
+s1.appendChild(remove)
+
+s1.appendChild(result) 
+
+let me = document.createElement('label')
+
+remove.innerText = "- By Aditya Kurapati (IF5I)"
+
+s1.appendChild(me)
+
+</script>
+
+</html>
